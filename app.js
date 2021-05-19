@@ -15,6 +15,9 @@ fs.readFile('vacc_test.json',
         // access elements to create variables
         resourceType      = jsonParsed.resourceType;
         profile           = jsonParsed.meta.profile;
+        vaccProcedureSystem  = jsonParsed.extension[0].valueCodeableConcept.coding[0].system;
+        vaccProcedureCode    = jsonParsed.extension[0].valueCodeableConcept.coding[0].code;
+        vaccProcedureDisplay = jsonParsed.extension[0].valueCodeableConcept.coding[0].display;
         vacc_system_uri   = jsonParsed.identifier[0].system;
         vacc_system_value = jsonParsed.identifier[0].value;
         status            = jsonParsed.status;
@@ -29,6 +32,9 @@ fs.readFile('vacc_test.json',
         // write variables to console 
         console.log("resourceType = " + resourceType);
         console.log("profile = " + profile);
+        console.log("vaccProcedureSystem = " + vaccProcedureSystem);
+        console.log("vaccProcedureCode = " + vaccProcedureCode);
+        console.log("vaccProcedureDisplay = " + vaccProcedureDisplay);
         console.log("vacc_system_uri (UNIQUE_ID_URI) = " + vacc_system_uri);
         console.log("vacc_system_value (UNIQUE_ID) = " + vacc_system_value);
         console.log("status = " + status);
@@ -37,6 +43,6 @@ fs.readFile('vacc_test.json',
         console.log("lotNumber = " + lotNumber);
         console.log("expirationDate = " + expirationDate);
         console.log("vaccineCodeSystem = " + vaccineCodeSystem);
+        console.log("vaccineCodeSystem = " + vaccineCodeCode);
         console.log("vaccineCodeDisplay = " + vaccineCodeDisplay);
 });
-

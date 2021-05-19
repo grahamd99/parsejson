@@ -3,9 +3,19 @@
   "id": "90343f71-9429-4c23-bd06-27cf37589585",
   "meta": {
        "profile":  [
-  	      "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Immunization"
+  	      "https://fhir.nhs.uk/StructureDefinition/NHSDigital-Immunization"
         ]
    },
+  "extension": [ {
+        "url": "https://fhir.hl7.org.uk/StructureDefinition/Extension-UKCore-VaccinationProcedure",
+        "valueCodeableConcept": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "1324681000000101",
+            "display": "Administration of first dose of SARS-CoV-2 (severe acute respiratory syndrome coronavirus 2) vaccine"
+          } ]
+        }
+      } ],
   "identifier": [
     {
       "system": "https://supplierABC/identifiers/vacc",

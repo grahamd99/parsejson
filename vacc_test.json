@@ -1,0 +1,109 @@
+{
+  "resourceType": "Immunization",
+  "id": "90343f71-9429-4c23-bd06-27cf37589585",
+  "meta": {
+       "profile":  [
+  	      "https://fhir.hl7.org.uk/StructureDefinition/UKCore-Immunization"
+        ]
+   },
+  "identifier": [
+    {
+      "system": "https://supplierABC/identifiers/vacc",
+      "value": "7718dda1-b5ff-4192-b441-273d9639643a"
+    }
+  ],
+  "status": "completed",
+  "vaccineCode": {
+  "coding": [
+   {
+     "system": "http://snomed.info/sct",
+     "code": "39326911000001101",
+     "display": "COVID-19 mRNA (nucleoside modified) Vaccine Moderna 0.1mg/0.5mL dose dispersion for injection multidose vials (Moderna, Inc)"
+}
+]
+},
+  "patient": {
+    "reference": "Patient/example"
+  },
+  "encounter": {
+    "reference": "Encounter/example"
+  },
+  "occurrenceDateTime": "2021-02-23T13:00:08.476+00:00",
+  "primarySource": true,
+  "location": {
+    "reference": "Location/1"
+  },
+  "manufacturer": {
+    "reference": "Organization/hl7"
+  },
+  "lotNumber": "AAJN11K",
+  "expirationDate": "2021-06-23",
+  "site": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "368208006",
+        "display": "Left upper arm structure (body structure)"
+      }
+    ]
+  },
+  "route": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "78421000",
+        "display": "Intramuscular route (qualifier value)"
+      }
+    ]
+  },
+  "doseQuantity": {
+    "value": 0.5,
+    "unit": "Millilitre",
+    "system": "http://snomed.info/sct",
+    "code": "258773002"
+  },
+  "performer": [
+    {
+      "function": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
+            "code": "OP"
+          }
+        ]
+      },
+      "actor": {
+        "reference": "Practitioner/example"
+      }
+    },
+    {
+      "function": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
+            "code": "AP"
+          }
+        ]
+      },
+      "actor": {
+        "reference": "Practitioner/example"
+      }
+    }
+  ],
+  "note": [
+    {
+      "text": "Notes on adminstration of vaccine"
+    }
+  ],
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "443684005",
+          "display": "Disease outbreak (event)"
+        }
+      ]
+    }
+  ]
+}
